@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\weather.proto">
+    <Protobuf Include="Protos\*">
       <Generator>MSBuild:Compile</Generator>
     </Protobuf>
   </ItemGroup>

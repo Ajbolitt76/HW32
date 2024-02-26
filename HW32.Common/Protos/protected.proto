@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "HW32.Grpc";
+
+package Protected;
+
+// The greeting service definition.
+service ProtectedDemo {
+    // Sends a greeting
+    rpc Public (Public.Request) returns (Public.Response);
+    rpc Private (google.protobuf.Empty) returns (PrivateResponse);
+}
+
+message Public {
+    message Request{
+        string name = 1;
+    }
+    message Response{
+        string token = 1;
+    }
+}
+
+message PrivateResponse {
+    string key = 1;
+    string name = 2;
+}

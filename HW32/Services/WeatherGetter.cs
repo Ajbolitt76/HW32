@@ -6,7 +6,7 @@ namespace HW32.Services;
 public class WeatherGetter
 {
     private readonly HttpClient _httpClient = new();
-    public async IAsyncEnumerable<WeatherEntryModel> GetWeather(TimeSpan pause,[EnumeratorCancellation] CancellationToken token)
+    public async IAsyncEnumerable<WeatherEntryModel> GetWeather(TimeSpan pause, [EnumeratorCancellation] CancellationToken token)
     {
         var end = DateTime.Now.ToString("yyyy-MM-dd");
         var start = DateTime.Now.Subtract(TimeSpan.FromDays(60)).ToString("yyyy-MM-dd");
