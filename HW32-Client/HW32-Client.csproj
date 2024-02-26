@@ -4,12 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HW32_Client</RootNamespace>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.57.0"/>
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="..\.dockerignore">
@@ -19,6 +16,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HW32.Common\HW32.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Net.Client" Version="2.57.0" />
   </ItemGroup>
 
 </Project>

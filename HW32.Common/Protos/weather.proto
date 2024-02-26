@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "HW32.Grpc";
+
+package Weather;
+
+// The greeting service definition.
+service Weather {
+  // Sends a greeting
+  rpc GetWeather (google.protobuf.Empty) returns (stream WeatherEntry);
+}
+
+message WeatherEntry {
+  google.protobuf.Timestamp time = 1;
+  double temperature = 2;
+}
